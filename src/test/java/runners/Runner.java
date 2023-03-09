@@ -5,8 +5,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class) //test çalıştırıcı notasyonu
-@CucumberOptions(  // Seneryoların nerede ve nasıl çalışacağı,hangi raporu kullanılmasıyla alakalı seçenekleri ayarlar
+@CucumberOptions(  // Senaryoların nerede ve nasıl çalışacağı,hangi raporu kullanılmasıyla alakalı seçenekleri ayarlar
         features = "src/test/resources/features", // features'ın yolunu belirmemiz gerekir
+        // features packageina sag tikla, copy path sonra path from content root sec ve yukarida adrese yaz
         glue = "stepdefinitions",// Kodlarımızı yazdığımız yeri belirtiriz
         tags = "@gp1", //Çalıştırmak istediğimiz seneryoya verdiğimiz tag'i belirtiriz
         dryRun = false // Seneryonun adımlarını kontrol eder ve çalıştığını görürüz
