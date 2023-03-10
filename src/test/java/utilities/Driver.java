@@ -18,6 +18,8 @@ public class Driver {
 
     public static WebDriver getDriver() {
 
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
+
         if (driver == null) { //driver'a deger atanmamissa bir kere if calistiktan sonra tekrar yeni pencere acmamasi
             // icin ikinci driver calisacagi zaman if'e deger atandigi icin if calismaz direk
             //return den driver ayni pencerede calisir
