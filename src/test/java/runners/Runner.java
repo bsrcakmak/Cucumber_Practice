@@ -4,20 +4,15 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class) //test çalıştırıcı notasyonu
-@CucumberOptions(  // Senaryoların nerede ve nasıl çalışacağı,hangi raporu kullanılmasıyla alakalı seçenekleri ayarlar
-        features = "src/test/resources/features", // features'ın yolunu belirmemiz gerekir
-        // features packageina sag tikla, copy path sonra path from content root sec ve yukarida adrese yaz
-        glue = "stepdefinitions",// Kodlarımızı yazdığımız yeri belirtiriz
-        tags = "@gp1", //Çalıştırmak istediğimiz seneryoya verdiğimiz tag'i belirtiriz
-        dryRun = false // Seneryonun adımlarını kontrol eder ve çalıştığını görürüz
+@RunWith(Cucumber.class) // test çalıştırıcı notasyonu
+@CucumberOptions( // Seneryoların nerede ve nasıl çalışacağı, hangi raporun kullanılmasıyla alakalı seçenekleri ayarlar
+        plugin = {"html:src/test/resources/reports/g1g2g3g4.html"},
+        features = "src/test/resources/features",
+        glue = "stepdefinitions",
+        tags = "@g1 or @g2 or @g3 or @g4 ",
+        dryRun = false //Seneryonun adımlarını kontrol eder ve çalıştığını görürüz
+
 )
-
-
-
 public class Runner {
+
 }
-
-
-
-
